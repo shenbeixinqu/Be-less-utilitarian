@@ -32,6 +32,14 @@ for (int i = 0; i < len; i++) {
  Related Topics 数组 双指针
 """
 
+'''
+思路:快慢指针
+快指针先走；
+如果nums[fast] == nums[slow], fast += 1；
+如果nums[fast] != nums[slow], slow += 1, nums[slow] = nums[fast]；
+最终索引(0，slow)区域内的元素即为无重复项的元素。
+'''
+
 
 def remove_duplicates(nums):
     if not nums:
