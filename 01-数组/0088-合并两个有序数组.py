@@ -16,7 +16,7 @@ ms2 的元素。
  0 <= m, n <= 200
  1 <= m + n <= 200
  -109 <= nums1[i], nums2[i] <= 109
- Related Topics 数组 双指针
+ Related Topics 01-数组 双指针
 """
 
 

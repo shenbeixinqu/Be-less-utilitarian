@@ -34,7 +34,7 @@ s = [2,2,3,3] 或 nums = [2,2,0,0]，也会被视作正确答案。
  0 <= nums[i] <= 50
  0 <= val <= 100
 
- Related Topics 数组 双指针
+ Related Topics 01-数组 双指针
 """
 
 '''

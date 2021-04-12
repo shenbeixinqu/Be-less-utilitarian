@@ -14,7 +14,7 @@
  示例 3:
 输入: [1,1,1,3,3,4,3,2,4,2]
 输出: true
- Related Topics 数组 哈希表
+ Related Topics 01-数组 哈希表
 """
 
 

@@ -26,7 +26,7 @@ ai) 和 (i, 0) 。找出其中的两条线，使得它们与 x 轴共同构成�
  2 <= n <= 3 * 104
  0 <= height[i] <= 3 * 104
 
- Related Topics 数组 双指针
+ Related Topics 01-数组 双指针
 """
 
 '''
