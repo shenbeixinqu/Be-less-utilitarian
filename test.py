@@ -1,4 +1,8 @@
-dic = {')':'(',']':'[','}':'{'}
+def two_sum(nums, target):
+    hash_map = {}
+    for ind, num in enumerate(nums):
+        hash_map[num] = ind
+    print(hash_map)
 
-stack = [1]
-print(not stack)
+
+two_sum([1, 4, 4, 9], 8)
