@@ -1,3 +1,11 @@
-dit = {"aaa": 111, "bbb": 222}
-for i, c in enumerate(dit):
-    print(i, c)
+def count_paths(m, n):
+    results = [[1] * n] * m
+    for i in range(1, m):
+        for j in range(1, n):
+            results[i][j] = results[i-1][j] + results[i][j-1]
+    print(results)
+    print(results[-1][-1])
+    return results[-1][-1]
+
+
+count_paths(3, 2)
