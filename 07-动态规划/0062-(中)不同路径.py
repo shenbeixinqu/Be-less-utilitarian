@@ -41,6 +41,7 @@ def count_paths(m, n):
         for j in range(1, n):
             # 状态方程(目标1),中间结果复用(目标2)
             results[i][j] = results[i-1][j] + results[i][j-1]
+    print(results[-1][-1])
     return results[-1][-1]
 
 
