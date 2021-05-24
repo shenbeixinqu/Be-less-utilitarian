@@ -28,5 +28,24 @@
 """
 
 
-def unique_paths_with_obstacles(Grid):
-    pass
+def unique_paths_with_obstacles(grid):
+    height, width = len(grid), len(grid[0])
+    store = [[0] * width for _ in range(height)]
+    # 从上到下,从左到右
+    # 每一行
+    for m in range(height):
+        # 每一列
+        for n in range(width):
+            # 如果这一格有障碍物
+            if not grid[m][n]:
+                if m == n == 0:
+                    store[m][n] = 1
+                else:
+                    a = store[m-1][n] if m != 0 else 0  # 上方格子
+                    b = store[m][n-1] if n != 0 else 0  # 左方格子
+                    store[m][n] = a + b
+    print(store[-1][-1])
+    return store[-1][-1]
+
+
+unique_paths_with_obstacles([[0,0,0],[0,1,0],[0,0,0]])
