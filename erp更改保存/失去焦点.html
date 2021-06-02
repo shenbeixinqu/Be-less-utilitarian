@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#foot").on('input', function () {
+                console.log($(this).val())
+            })
+        })
+        var total_val1 = $('input[name="foot"]').val()
+        var total_val2 = $('input[name="foot"]').attr("value")
+
+        console.log('total_val',total_val1)
+        $("input").blur(function(){
+            console.log('total_val2',total_val2)
+        });
+    </script>
+</head>
+<body>
+    <input type="text" name="foot" id="foot">
+
+</body>
+</html>
