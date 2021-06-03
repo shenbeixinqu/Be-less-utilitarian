@@ -28,5 +28,30 @@
  👍 429 👎 0
  """
 
+"""
+思路:
+    1.根据区间右边界进行升序排列
+    2.维护right,代表已留下区间的最大右边界
+    3.遍历排序后的区间
+        如果当前区间的左边界>=right,该区可以留下,更新right
+        如果当前区间的左边界<right,该区间去除,更新结果res
+"""
+
+
 def erase_overlap_intervals(intervals):
-    pass
+    if not intervals:
+        return 0
+    intervals.sort(key=lambda x: x[1])
+    res = 0
+    right = intervals[0][1]
+    for i in range(1, len(intervals)):
+        if intervals[i][0] < right:
+            res += 1
+        else:
+            right = intervals[i][1]
+    print(res)
+    return res
+
+
+erase_overlap_intervals([[1, 2], [2, 3]])
+erase_overlap_intervals([[1, 2], [2, 3], [3, 4], [1, 3]])
