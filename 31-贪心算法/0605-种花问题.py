@@ -29,6 +29,7 @@
     连续三个0可以种一盆花
 """
 
+
 def can_place_flowers(flowerbed, n):
     flowerbed = [0] + flowerbed
     flowerbed = flowerbed + [0]
