@@ -31,12 +31,12 @@
 """
 
 
-# leetcode submit region begin(Prohibit modification and deletion)
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
 class Solution:
-    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-# leetcode submit region end(Prohibit modification and deletion)
+    def add_two_numbers(self, l1, l2):
+        pass
