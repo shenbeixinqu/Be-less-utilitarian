@@ -21,14 +21,35 @@ l1 和 l2 均按 非递减顺序 排列
 """
 
 
+# 定义节点
 class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+# 将传入的数组转化为链表
+def create_linked_list(arr):
+    head = ListNode(arr[0])
+    cur = head
+    for i in range(1, len(arr)):
+        cur.next = ListNode(arr[i])
+        cur = cur.next
+    return head
+
+
+# 传入链表头节点，以数组形式返回
+def print_linked_list(head):
+    cur = head
+    res = []
+    while cur:
+        res.append(cur.val)
+        cur = cur.next
+    return res
 
 
 class Solution:
-    def merge_two_lists(self, l1: ListNode, l2: ListNode) -> ListNode:
+    def merge_two_lists(self, l1, l2):
         if not l1:
             return l2
         if not l2:
@@ -41,4 +62,9 @@ class Solution:
             return l2
 
 
-Solution().merge_two_lists([1,2,4], [1,3,4])
+if __name__ == "__main__":
+    head1 = create_linked_list([1, 2, 4])
+    head2 = create_linked_list([1, 3, 4])
+    solution = Solution()
+    sorted_lists = solution.merge_two_lists(head1, head2)
+    print(print_linked_list(sorted_lists))
